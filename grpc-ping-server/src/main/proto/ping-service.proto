@@ -1,0 +1,26 @@
+// Proto file for ping service definition
+
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "it.fushji.grpc.ping";
+option java_outer_classname = "PingServiceProto";
+
+package ping_service;
+
+// The ping service definition
+service PingService {
+    rpc ping(PingRequest) returns (PingResponse) {}
+}
+
+// PingRequest definition
+message PingRequest {
+    string payload = 1;
+}
+
+// PingResponse definition
+message PingResponse {
+    string payload = 1;
+}
+
+
